@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth overflow-x-hidden">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>The Wedding House | Luxury Wedding Palace & Banquets Varanasi</title>
+  
+  <!-- Tailwind CSS & Font Awesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- Google Fonts: Cinzel Decorative & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            palace: {
+              gold: '#D4AF37',
+              goldLight: '#F5E08B',
+              goldDark: '#997E1C',
+              maroon: '#4A0E17',
+              maroonDark: '#26060B',
+              black: '#070709',
+              card: '#121217',
+              border: 'rgba(212, 175, 55, 0.22)'
+            }
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Montserrat', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* पूरे पेज पर हॉरिजॉन्टल शेक और अनचाहा स्क्रॉल रोकने का लॉक */
+    html, body {
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
+      background-color: #070709;
+      color: #F3F4F6;
+      font-family: 'Montserrat', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    * {
+      box-sizing: border-box;
+    }
+
+    /* गोल्ड ग्रेडिएंट टेक्स्ट */
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #F5E08B 0%, #D4AF37 50%, #AA8C2C 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* लग्जरी कार्ड्स */
+    .royal-card {
+      background: linear-gradient(180deg, rgba(20, 20, 27, 0.9) 0%, rgba(10, 10, 14, 0.96) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.22);
+      backdrop-filter: blur(14px);
+    }
+
+    /* गोल्ड प्रीमियम बटन */
+    .gold-btn {
+      background: linear-gradient(135deg, #D4AF37 0%, #AA8C2C 100%);
+      color: #070709;
+      font-weight: 700;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .gold-btn:hover {
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+      transform: translateY(-1px);
+    }
+    .gold-btn:active {
+      transform: scale(0.97);
+    }
+
+    .gold-outline-btn {
+      border: 1px solid #D4AF37;
+      color: #F5E08B;
+      transition: all 0.3s ease;
+    }
+    .gold-outline-btn:hover {
+      background: rgba(212, 175, 55, 0.15);
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    }
+
+    /* इंट्रो बैकग्राउंड का सिनेमैटिक स्लो ज़ूम (Ken Burns Effect) */
+    @keyframes kenBurns {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+    .animate-kenburns {
+      animation: kenBurns 18s ease-in-out infinite;
+    }
+
+    /* रॉयल शाइन एनिमेशन */
+    @keyframes goldShimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .shimmer-text {
+      background: linear-gradient(90deg, #D4AF37 0%, #FFF4D0 50%, #D4AF37 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: goldShimmer 4s linear infinite;
+    }
+
+    /* गैलरी इमेज ज़ूम */
+    .gallery-img {
+      transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .gallery-box:hover .gallery-img {
+      transform: scale(1.08);
+    }
+  </style>
+</head>
+<body class="selection:bg-palace-gold selection:text-black">
+
+  <!-- ==================== CINEMATIC ROYAL INTRO SCREEN ==================== -->
+  <div id="introCurtain" class="fixed inset-0 z-50 flex flex-col items-center justify-between text-center overflow-hidden transition-all duration-1000 w-full h-[100dvh]">
+    <!-- Moving Cinematic Background (No distortion, proper fit) -->
+    <div class="absolute inset-0 bg-cover bg-center -z-10 animate-kenburns" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=85');"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-[#070709]/95 via-[#070709]/80 to-[#070709]/95 -z-10"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_20%,_#070709_85%)] -z-10"></div>
+
+    <!-- Top Badge -->
+    <div class="pt-8 px-4">
+      <div class="inline-flex items-center gap-2 border border-palace-gold/40 bg-palace-black/70 backdrop-blur-md px-4 py-1.5 rounded-full shadow-lg">
+        <i class="fa-solid fa-gem text-palace-gold text-[10px]"></i>
+        <span class="text-[10px] uppercase tracking-[0.28em] text-palace-goldLight font-semibold">Varanasi's Grand Wedding Palace</span>
+      </div>
+    </div>
+
+    <!-- Center Monogram & Typography -->
+    <div class="px-6 max-w-md mx-auto flex flex-col items-center">
+      <!-- Animated Royal Crest -->
+      <div class="relative w-20 h-20 mb-5 flex items-center justify-center">
+        <div class="absolute inset-0 rounded-full border border-palace-gold/30 animate-ping opacity-30"></div>
+        <div class="w-20 h-20 rounded-full border-2 border-palace-gold/60 border-t-transparent animate-spin duration-3000"></div>
+        <div class="absolute inset-1 rounded-full bg-palace-black/80 backdrop-blur-sm border border-palace-gold flex items-center justify-center shadow-lg shadow-palace-gold/20">
+          <i class="fa-solid fa-crown text-2xl text-palace-gold"></i>
+        </div>
+      </div>
+
+      <span class="text-[11px] uppercase tracking-[0.35em] text-gray-300 font-medium mb-1">शाही विवाह स्थल</span>
+      <h1 class="text-3xl sm:text-5xl font-cinzel font-black shimmer-text tracking-widest leading-tight mb-2">
+        THE WEDDING HOUSE
+      </h1>
+      <div class="h-0.5 w-24 bg-gradient-to-r from-transparent via-palace-gold to-transparent mb-3"></div>
+      <p class="text-[11px] sm:text-xs text-gray-300 font-light leading-relaxed max-w-xs mb-2">
+        Ring Road, in front of Sankara Eye Hospital, Varanasi
+      </p>
+      <div class="flex items-center gap-2 text-[10px] text-palace-gold font-semibold">
+        <span>4.8★ Google Rating</span>
+        <span>•</span>
+        <span>1500+ Guests Capacity</span>
+      </div>
+    </div>
+
+    <!-- Bottom Sleek Pill Button -->
+    <div class="pb-10 px-6 w-full max-w-xs mx-auto">
+      <button onclick="enterPalace()" class="w-full gold-btn py-3.5 px-6 rounded-full text-xs uppercase font-bold tracking-[0.2em] flex items-center justify-center gap-3 shadow-2xl shadow-palace-gold/30 cursor-pointer group">
+        <span>शाही अनुभव शुरू करें</span>
+        <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== SLIM NAVBAR ==================== -->
+  <header class="sticky top-0 z-40 bg-[#070709]/95 backdrop-blur-md border-b border-palace-border w-full">
+    <div class="max-w-7xl mx-auto px-4 h-14 sm:h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-full border border-palace-gold/50 flex items-center justify-center bg-palace-gold/10">
+          <i class="fa-solid fa-crown text-palace-gold text-xs"></i>
+        </div>
+        <div>
+          <span class="text-sm sm:text-base font-cinzel font-bold gold-gradient-text tracking-wider leading-none block">THE WEDDING HOUSE</span>
+          <span class="text-[8px] uppercase tracking-[0.2em] text-gray-400 block mt-0.5">Varanasi • 4.8★ Luxury Venue</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden lg:flex items-center gap-6 text-[11px] font-semibold uppercase tracking-wider text-gray-300">
+        <a href="#about" class="hover:text-palace-gold transition">परिचय</a>
+        <a href="#venues" class="hover:text-palace-gold transition">शाही वेन्यूज़</a>
+        <a href="#gallery" class="hover:text-palace-gold transition">फ़ोटो गैलरी (16+)</a>
+        <a href="#packages" class="hover:text-palace-gold transition">वेडिंग पैकेज</a>
+        <a href="#calculator" class="hover:text-palace-gold transition">बजट अनुमान</a>
+        <a href="#contact" class="hover:text-palace-gold transition">लोकेशन व संपर्क</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="flex items-center gap-2">
+        <a href="tel:08488808588" class="hidden sm:inline-flex items-center gap-1.5 border border-palace-border text-palace-goldLight px-3 py-1.5 rounded-full text-xs font-semibold">
+          <i class="fa-solid fa-phone text-[10px]"></i>
+          <span>084888 08588</span>
+        </a>
+        <a href="https://wa.me/918488808588?text=Hello%20The%20Wedding%20House,%20I%20want%20to%20inquire%20about%20booking%20dates" target="_blank" class="gold-btn px-4 py-1.5 rounded-full text-[11px] uppercase tracking-wider flex items-center gap-1.5 shadow">
+          <i class="fa-brands fa-whatsapp text-xs"></i>
+          <span>Check Date</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="relative min-h-[82vh] flex items-center justify-center px-4 overflow-hidden w-full">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1920&q=85');"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-palace-black via-palace-black/85 to-palace-black/60"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto text-center py-14">
+      <div class="inline-flex items-center gap-2 border border-palace-gold/30 bg-palace-maroon/40 backdrop-blur-sm px-4 py-1 rounded-full mb-5">
+        <i class="fa-solid fa-star text-palace-gold text-[10px]"></i>
+        <span class="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-palace-goldLight">4.8★ Rated Luxury Destination • 1500+ Gatherings</span>
+      </div>
+
+      <h2 class="text-3xl sm:text-6xl font-cinzel font-extrabold gold-gradient-text leading-tight mb-5">
+        Where Royal Dreams Turn Into Eternal Celebrations
+      </h2>
+
+      <p class="text-gray-300 text-xs sm:text-base max-w-2xl mx-auto mb-8 font-light leading-relaxed">
+        शाही झूमरों से सज़ा सेंट्रल एसी बैंक्वेट हॉल, 1500+ मेहमानों की क्षमता वाला विशाल लॉन, और फाइव-स्टार कैटरिंग व्यवस्था।
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-md mx-auto">
+        <a href="#calculator" class="w-full sm:w-auto gold-btn py-3.5 px-8 rounded-full text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-xl">
+          <i class="fa-solid fa-calculator text-xs"></i>
+          <span>बजट कैलकुलेट करें</span>
+        </a>
+        <a href="#gallery" class="w-full sm:w-auto gold-outline-btn py-3.5 px-8 rounded-full text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+          <i class="fa-solid fa-images text-xs"></i>
+          <span>16+ फ़ोटो गैलरी देखें</span>
+        </a>
+      </div>
+
+      <!-- Trust Metrics -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-12 pt-8 border-t border-palace-border/50 text-center">
+        <div class="royal-card p-3 rounded-xl">
+          <span class="text-2xl font-bold font-cinzel text-palace-gold block">1500+</span>
+          <span class="text-[10px] uppercase tracking-wider text-gray-400">मेहमान क्षमता</span>
+        </div>
+        <div class="royal-card p-3 rounded-xl">
+          <span class="text-2xl font-bold font-cinzel text-palace-gold block">4.8★</span>
+          <span class="text-[10px] uppercase tracking-wider text-gray-400">Google Rating (41+)</span>
+        </div>
+        <div class="royal-card p-3 rounded-xl">
+          <span class="text-2xl font-bold font-cinzel text-palace-gold block">100% AC</span>
+          <span class="text-[10px] uppercase tracking-wider text-gray-400">सेंट्रल हॉल कूलिंग</span>
+        </div>
+        <div class="royal-card p-3 rounded-xl">
+          <span class="text-2xl font-bold font-cinzel text-palace-gold block">200+</span>
+          <span class="text-[10px] uppercase tracking-wider text-gray-400">कार पार्किंग स्पेस</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT SECTION ==================== -->
+  <section id="about" class="py-20 max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="relative">
+        <div class="rounded-2xl overflow-hidden border border-palace-border shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1544077960-604201fe74bc?auto=format&fit=crop&w=1000&q=80" alt="Palace View" class="w-full h-80 sm:h-96 object-cover" />
+        </div>
+        <div class="absolute -bottom-4 -right-4 royal-card p-4 rounded-xl border border-palace-gold/40">
+          <span class="text-palace-gold font-cinzel font-bold text-lg block leading-none">Premier Venue</span>
+          <span class="text-[10px] text-gray-400">वाराणसी का पसंदीदा स्थल</span>
+        </div>
+      </div>
+
+      <div>
+        <span class="text-[10px] uppercase tracking-[0.25em] text-palace-gold font-semibold block mb-2">Welcome To Grandeur</span>
+        <h2 class="text-2xl sm:text-4xl font-cinzel font-bold gold-gradient-text mb-4 leading-tight">
+          काशी के दिल में एक अभूतपूर्व राजसी माहौल
+        </h2>
+        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed font-light mb-6">
+          <strong>The Wedding House</strong> रिंग रोड वाराणसी पर स्थित एक अति-आधुनिक वेडिंग पैलेस है। विशाल हॉल, हरा-भरा लॉन और समर्पित टीम आपकी शादी के हर उत्सव को यादगार बनाती है।
+        </p>
+
+        <div class="grid grid-cols-2 gap-4 text-xs">
+          <div class="flex items-start gap-2.5">
+            <i class="fa-solid fa-snowflake text-palace-gold mt-1"></i>
+            <div>
+              <strong class="text-white block font-medium">सेंट्रल एसी</strong>
+              <span class="text-[11px] text-gray-400">हॉल व ब्राइडल रूम्स में</span>
+            </div>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <i class="fa-solid fa-square-parking text-palace-gold mt-1"></i>
+            <div>
+              <strong class="text-white block font-medium">वैले पार्किंग</strong>
+              <span class="text-[11px] text-gray-400">200+ गाड़ियाँ सुरक्षित</span>
+            </div>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <i class="fa-solid fa-bolt text-palace-gold mt-1"></i>
+            <div>
+              <strong class="text-white block font-medium">पावर बैकअप</strong>
+              <span class="text-[11px] text-gray-400">100% साइलेंट जनरेटर</span>
+            </div>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <i class="fa-solid fa-utensils text-palace-gold mt-1"></i>
+            <div>
+              <strong class="text-white block font-medium">कैटरिंग किचन</strong>
+              <span class="text-[11px] text-gray-400">विशाल व हाइजीनिक</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3 GRAND VENUES ==================== -->
+  <section id="venues" class="py-20 bg-[#0a0a0f] border-y border-palace-border/50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-md mx-auto mb-12">
+        <span class="text-[10px] uppercase tracking-[0.25em] text-palace-gold font-semibold">Spaces</span>
+        <h3 class="text-2xl sm:text-4xl font-cinzel font-bold gold-gradient-text mt-1">हमारे भव्य वेन्यू</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Venue 1 -->
+        <div class="royal-card rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-palace-gold transition duration-500">
+          <div class="h-56 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=80" alt="Crystal Hall" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <span class="absolute top-3 right-3 bg-palace-black/80 border border-palace-gold text-palace-gold text-[9px] font-bold px-3 py-1 rounded-full uppercase">Indoor AC</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] text-palace-gold uppercase tracking-wider font-semibold block mb-1">400 - 800 Guests</span>
+              <h4 class="text-xl font-cinzel font-bold text-white mb-2">The Royal Crystal Hall</h4>
+              <p class="text-xs text-gray-300 font-light mb-4 leading-relaxed">
+                क्रिस्टल झूमर, सेंट्रली एयर-कंडीशंड और इटालियन फ्लोरिंग। जयमाल, संगीत और रिसेप्शन के लिए सर्वोत्तम वेन्यू।
+              </p>
+            </div>
+            <a href="https://wa.me/918488808588?text=Inquiry%20for%20Royal%20Crystal%20Hall" target="_blank" class="w-full text-center gold-outline-btn py-3 rounded-xl text-xs font-bold uppercase tracking-wider block">
+              हॉल की तारीख पूछें
+            </a>
+          </div>
+        </div>
+
+        <!-- Venue 2 -->
+        <div class="royal-card rounded-2xl overflow-hidden flex flex-col justify-between border-palace-gold/60 shadow-xl group hover:border-palace-gold transition duration-500">
+          <div class="h-56 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=700&q=80" alt="Lawn" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <span class="absolute top-3 right-3 bg-palace-gold text-palace-black text-[9px] font-bold px-3 py-1 rounded-full uppercase">Most Popular</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] text-palace-gold uppercase tracking-wider font-semibold block mb-1">800 - 1500+ Guests</span>
+              <h4 class="text-xl font-cinzel font-bold text-white mb-2">The Imperial Shahi Lawn</h4>
+              <p class="text-xs text-gray-300 font-light mb-4 leading-relaxed">
+                25,000 वर्ग फुट का खुला लॉन, 60 फुट चौड़ा स्टेज, और 30+ लाइव फ़ूड काउंटर्स की खुली व्यवस्था।
+              </p>
+            </div>
+            <a href="https://wa.me/918488808588?text=Inquiry%20for%20Imperial%20Lawn" target="_blank" class="w-full text-center gold-btn py-3 rounded-xl text-xs font-bold uppercase tracking-wider block">
+              लॉन बुक करें
+            </a>
+          </div>
+        </div>
+
+        <!-- Venue 3 -->
+        <div class="royal-card rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-palace-gold transition duration-500">
+          <div class="h-56 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=700&q=80" alt="Courtyard" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <span class="absolute top-3 right-3 bg-palace-black/80 border border-palace-border text-gray-300 text-[9px] font-bold px-3 py-1 rounded-full uppercase">Pre-Wedding</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] text-palace-gold uppercase tracking-wider font-semibold block mb-1">150 - 350 Guests</span>
+              <h4 class="text-xl font-cinzel font-bold text-white mb-2">Heritage Courtyard</h4>
+              <p class="text-xs text-gray-300 font-light mb-4 leading-relaxed">
+                हल्दी, मेहंदी, संगीत और कॉकटेल पार्टी के लिए स्पेशल थीम डेकोरेशन स्पेस।
+              </p>
+            </div>
+            <a href="https://wa.me/918488808588?text=Inquiry%20for%20Haldi%20Mehendi%20Courtyard" target="_blank" class="w-full text-center gold-outline-btn py-3 rounded-xl text-xs font-bold uppercase tracking-wider block">
+              हल्दी स्लॉट पूछें
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COMPLETE 16-PHOTO GALLERY ==================== -->
+  <section id="gallery" class="py-20 max-w-7xl mx-auto px-4">
+    <div class="text-center max-w-md mx-auto mb-8">
+      <span class="text-[10px] uppercase tracking-[0.25em] text-palace-gold font-semibold">Visual Grandeur</span>
+      <h3 class="text-2xl sm:text-4xl font-cinzel font-bold gold-gradient-text mt-1">विशाल फ़ोटो गैलरी (16+)</h3>
+      <p class="text-gray-400 text-xs mt-2">मंडप, झूमर, स्टेज और डाइनिंग की उच्च-गुणवत्ता वाली झलकियां</p>
+
+      <!-- Category Filter Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mt-6">
+        <button onclick="filterGallery('all')" class="gallery-btn active bg-palace-gold text-palace-black font-bold px-4 py-1.5 rounded-full text-[11px] uppercase tracking-wider">All (सभी)</button>
+        <button onclick="filterGallery('decor')" class="gallery-btn bg-palace-card text-gray-400 hover:text-palace-gold border border-palace-border px-4 py-1.5 rounded-full text-[11px] uppercase tracking-wider">Mandap & Decor</button>
+        <button onclick="filterGallery('lighting')" class="gallery-btn bg-palace-card text-gray-400 hover:text-palace-gold border border-palace-border px-4 py-1.5 rounded-full text-[11px] uppercase tracking-wider">Lights & Stage</button>
+        <button onclick="filterGallery('dining')" class="gallery-btn bg-palace-card text-gray-400 hover:text-palace-gold border border-palace-border px-4 py-1.5 rounded-full text-[11px] uppercase tracking-wider">Royal Dining</button>
+      </div>
+    </div>
+
+    <!-- 16 Curated Photos Grid with Lightbox Trigger -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <!-- 1 -->
+      <div class="gallery-box decor relative h-48 sm:h-60 rounded-xl overflow-hidden royal-card cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85', 'Royal Floral Mandap')">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Mandap" class="gallery-img w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-palace-black via-transparent opacity-80 flex items-end p-3">
+          <span class="text-[11px] font-semibold text-palace-gold">शाही पुष्प मंडप</span>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="gallery-box lighting relative h-48 sm:h-60 rounded-xl overflow-hidden royal-card cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=85', 'Crystal Chandelier')">
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80" alt="Chandelier" class="gallery-img w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-palace-black via-transparent opacity-80 flex items-end p-3">
+          <span class="text-[11px] font-semibold text-palace-gold">क्रिस्टल झूमर हॉल</span>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="gallery-box dining relative h-48 sm:h-60 rounded-xl overflow-hidden royal-card cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1200&q=85', 'Royal Dining Setup')">
+        <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=600&q=80" alt="Dining" class="gallery-img w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-palace-black via-transparent opacity-80 flex items-end p-3">
+          <span class="text-[11px] font-semibold text-palace-gold">शाही बुफे सेटअप</span>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="gallery-box lighting relative h-48 sm:h-60 rounded-xl overflow-hidden royal-card cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=1200&q=85', 'Lawn Illumination')">
+        <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=600&q=80" alt="Night lawn" class="gallery-img w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-palace-black via-transparent opacity-80 flex items-end p-3">
+          <span class="text-[11px] font-semibold text-palace-gold">लॉन नाइट लाइटिंग</span>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="gallery-box decor relative h-48 sm:h-60 rounded-xl overflow-hidden royal-card cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1545232979-fbf68fe9b10d?auto=format&fit=crop&w=1200&q=85', 'Stage Backdrop')">
+        <img src="https://images.unsplash.com/photo-1545232979-fbf68fe9b10d?auto=format&fit=crop&w=600&q=80" alt="Stage decor" class="gallery-img w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-palace-black via-transparent opacity-80 flex items-end p-3">
+          <span class="text-[11px] font-semibold text-palace-gold">स्टेज फ्लोरल बैकड्रॉप</span>
+        </div>
+      </div>
+      <!-- 6 -->
+      <div class="gallery-box dining relative h-48 sm:h-60 rounded-xl overflow-hidden royal-card cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1200&q=85', 'Live Chaat Counter')">
+        <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=600&q=80" alt="Chaat counter" class="gallery-img w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-palace-black via-transparent opacity-80 flex items-end p-3">
+          <span class="text-[11px] font-semibold text-palace-gold">बनारसी लाइव चाट</span>
+        </div>
+      </div>
+      <!-- 7 -->
+      <div class="gallery-box decor relative h-48 sm:h-60 rounded-xl overflow-hidden royal-card cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=85', 'Baraat Tunnel')">
+        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80" alt="Baraat Tunnel" class="gallery-img w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-palace-black via-transparent opacity-80 flex items-end p-3">
+          <span class="text-[11px] font-semibold text-palace-gold">शाही बारात टनल</span>
+        </div>
+      </div>
+      <!-- 8 -->
+      <div class="gallery-box lighting relative h-48 sm:h-60 rounded-xl overflow-hidden royal-card cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1519225424629-6563e72898cf?auto=format&fit=crop&w=1200&q=85', 'Golden Arch')">
+        <img src="https://images.unsplash.com/photo-1519225424629-6563e72898cf?auto=format&fit=crop&w=600&q=80" alt="Golden Arch" class="gallery-img w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-palace-black via-transparent opacity-80 flex items-end p-3">
+          <span class="text-[11px] font-semibold text-palace-gold">गोल्डन आर्क आर्चवे</span>
+        </div>
+      </div>
+      <!-- 9 -->
+      <div class="gallery-box dining relative h-48 sm:h-60 rounded-xl overflow-hidden royal-card cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=1200&q=85', 'Dessert Lounge')">
+        <img src="https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=600&q=80" alt="Dessert lounge" class="gallery-img w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-palace-black via-transparent opacity-80 flex items-end p-3">
+          <span class="text-[11px] font-semibold text-palace-gold">रॉयल मिठाई लाउंज</span>
+        </div>
+      </div>
+      <!-- 10 -->
+      <div class="gallery-box decor relative h-48 sm:h-60 rounded-xl overflow-hidden royal-card cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=1200&q=85', 'Haldi Decor')">
+        <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=600&q=80" alt="Haldi" class="gallery-img w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-palace-black via-transparent opacity-80 flex items-end p-3">
+          <span class="text-[11px] font-semibold text-palace-gold">हल्दी-मेहंदी विलेज</span>
+        </div>
+      </div>
+      <!-- 11 -->
+      <div class="gallery-box lighting relative h-48 sm:h-60 rounded-xl overflow-hidden royal-card cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=85', 'DJ Sound Floor')">
+        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80" alt="DJ Dance" class="gallery-img w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-palace-black via-transparent opacity-80 flex items-end p-3">
+          <span class="text-[11px] font-semibold text-palace-gold">संगीत डीजे फ्लोर</span>
+        </div>
+      </div>
+      <!-- 12 -->
+      <div class="gallery-box decor relative h-48 sm:h-60 rounded-xl overflow-hidden royal-card cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1200&q=85', 'Bridal Dressing Room')">
+        <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=600&q=80" alt="Bridal Room" class="gallery-img w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-palace-black via-transparent opacity-80 flex items-end p-3">
+          <span class="text-[11px] font-semibold text-palace-gold">ब्राइडल मेकअप सुइट</span>
+        </div>
+      </div>
+      <!-- 13 -->
+      <div class="gallery-box dining relative h-48 sm:h-60 rounded-xl overflow-hidden royal-card cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=85', 'Salad & Continental Bar')">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Salad bar" class="gallery-img w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-palace-black via-transparent opacity-80 flex items-end p-3">
+          <span class="text-[11px] font-semibold text-palace-gold">कॉन्टिनेंटल सलाद बार</span>
+        </div>
+      </div>
+      <!-- 14 -->
+      <div class="gallery-box decor relative h-48 sm:h-60 rounded-xl overflow-hidden royal-card cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=1200&q=85', 'Jaimala Revolving Stage')">
+        <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=600&q=80" alt="Jaimala Stage" class="gallery-img w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-palace-black via-transparent opacity-80 flex items-end p-3">
+          <span class="text-[11px] font-semibold text-palace-gold">रिवॉल्विंग जयमाल स्टेज</span>
+        </div>
+      </div>
+      <!-- 15 -->
+      <div class="gallery-box lighting relative h-48 sm:h-60 rounded-xl overflow-hidden royal-card cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1200&q=85', 'Warm Ambience')">
+        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=600&q=80" alt="Lawn lights" class="gallery-img w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-palace-black via-transparent opacity-80 flex items-end p-3">
+          <span class="text-[11px] font-semibold text-palace-gold">वार्म एम्बियंस लाइट्स</span>
+        </div>
+      </div>
+      <!-- 16 -->
+      <div class="gallery-box decor relative h-48 sm:h-60 rounded-xl overflow-hidden royal-card cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=85', 'Palace Panoramic View')">
+        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&q=80" alt="Palace View" class="gallery-img w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-palace-black via-transparent opacity-80 flex items-end p-3">
+          <span class="text-[11px] font-semibold text-palace-gold">पैलेस पैनोरमिक व्यू</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LIGHTBOX MODAL ==================== -->
+  <div id="lightbox" class="fixed inset-0 z-50 bg-black/95 hidden items-center justify-center p-4">
+    <button onclick="closeLightbox()" class="absolute top-5 right-5 text-gray-400 hover:text-palace-gold text-2xl">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="max-w-4xl max-h-[85vh] flex flex-col items-center">
+      <img id="lightboxImg" src="" alt="Enlarged" class="max-w-full max-h-[75vh] rounded-xl object-contain border border-palace-border shadow-2xl" />
+      <p id="lightboxCaption" class="mt-3 text-xs font-cinzel text-palace-goldLight font-bold tracking-wider"></p>
+    </div>
+  </div>
+
+  <!-- ==================== WEDDING PACKAGES ==================== -->
+  <section id="packages" class="py-20 bg-[#0a0a0f] border-y border-palace-border/50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-md mx-auto mb-12">
+        <span class="text-[10px] uppercase tracking-[0.25em] text-palace-gold font-semibold">Packages</span>
+        <h3 class="text-2xl sm:text-4xl font-cinzel font-bold gold-gradient-text mt-1">शाही वेडिंग पैकेज</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Package 1 -->
+        <div class="royal-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 block mb-1">Pre-Wedding / Engagement</span>
+            <h4 class="text-xl font-cinzel font-bold text-white mb-2">सिल्वर रॉयल पैकेज</h4>
+            <ul class="text-xs text-gray-300 space-y-2.5 my-4 border-t border-palace-border/40 pt-4">
+              <li><i class="fa-solid fa-check text-palace-gold mr-2"></i>सेंट्रल एसी क्रिस्टल बैंक्वेट हॉल</li>
+              <li><i class="fa-solid fa-check text-palace-gold mr-2"></i>थीम बेस्ड फ्लोरल स्टेज व सोफा डेकोर</li>
+              <li><i class="fa-solid fa-check text-palace-gold mr-2"></i>2 एसी ब्राइडल रूम्स</li>
+              <li><i class="fa-solid fa-check text-palace-gold mr-2"></i>100% साइलेंट जनरेटर बैकअप</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/918488808588?text=I%20want%20price%20of%20Silver%20Royal%20Package" target="_blank" class="w-full text-center gold-outline-btn py-3 rounded-xl text-xs font-bold uppercase tracking-wider block">
+            पैकेज रेट्स WhatsApp पर लें
+          </a>
+        </div>
+
+        <!-- Package 2 (Most Popular) -->
+        <div class="royal-card rounded-2xl p-6 flex flex-col justify-between border-2 border-palace-gold shadow-xl">
+          <span class="bg-palace-gold text-palace-black text-[9px] font-black uppercase tracking-widest px-3 py-0.5 rounded-full self-start mb-2">
+            Most Selected
+          </span>
+          <div>
+            <span class="text-[10px] font-semibold uppercase tracking-wider text-palace-gold block mb-1">Complete Grand Wedding</span>
+            <h4 class="text-2xl font-cinzel font-bold text-palace-goldLight mb-2">गोल्ड इम्पीरियल पैकेज</h4>
+            <ul class="text-xs text-gray-200 space-y-2.5 my-4 border-t border-palace-border pt-4">
+              <li><i class="fa-solid fa-check text-palace-gold mr-2"></i>क्रिस्टल हॉल + विशाल लॉन दोनों का उपयोग</li>
+              <li><i class="fa-solid fa-check text-palace-gold mr-2"></i>भव्य मंडप, 50 फुट स्टेज व बारात टनल</li>
+              <li><i class="fa-solid fa-check text-palace-gold mr-2"></i>4 लग्जरी एसी रूम्स (परिवार के रुकने हेतु)</li>
+              <li><i class="fa-solid fa-check text-palace-gold mr-2"></i>वैले पार्किंग व सुरक्षा गार्ड्स</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/918488808588?text=I%20want%20to%20book%20Gold%20Imperial%20Package" target="_blank" class="w-full text-center gold-btn py-3 rounded-xl text-xs font-black uppercase tracking-wider block shadow-lg">
+            बुक स्लॉट व कस्टमाइज करें
+          </a>
+        </div>
+
+        <!-- Package 3 -->
+        <div class="royal-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 block mb-1">Mega Luxury Celebration</span>
+            <h4 class="text-xl font-cinzel font-bold text-white mb-2">कोहिनूर बेस्पोक पैकेज</h4>
+            <ul class="text-xs text-gray-300 space-y-2.5 my-4 border-t border-palace-border/40 pt-4">
+              <li><i class="fa-solid fa-check text-palace-gold mr-2"></i>पूरा परिसर 24 घंटे के लिए एक्सक्लूसिव</li>
+              <li><i class="fa-solid fa-check text-palace-gold mr-2"></i>कस्टम डिजाइनर मंडप व सेलिब्रिटी स्टेज</li>
+              <li><i class="fa-solid fa-check text-palace-gold mr-2"></i>6 लग्जरी रूम्स + गेस्ट लाउंज</li>
+              <li><i class="fa-solid fa-check text-palace-gold mr-2"></i>डेडिकेटेड इवेंट मैनेजर व टीम</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/918488808588?text=I%20want%20Kohinoor%20Bespoke%20Package%20details" target="_blank" class="w-full text-center gold-outline-btn py-3 rounded-xl text-xs font-bold uppercase tracking-wider block">
+            कोटेशन की जानकारी लें
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LIVE BUDGET ESTIMATOR ==================== -->
+  <section id="calculator" class="py-20 max-w-4xl mx-auto px-4">
+    <div class="royal-card rounded-2xl p-6 sm:p-10 border border-palace-gold/40">
+      <div class="text-center mb-8">
+        <span class="text-[10px] uppercase tracking-[0.2em] text-palace-gold font-semibold">Interactive</span>
+        <h3 class="text-2xl sm:text-3xl font-cinzel font-bold text-white mt-1">शादी का लाइव बजट निकालें</h3>
+      </div>
+
+      <div class="space-y-5">
+        <div>
+          <label class="flex justify-between text-xs text-gray-300 font-medium mb-1">
+            <span>अपेक्षित मेहमान:</span>
+            <span id="guestLabel" class="text-palace-gold font-bold">600 लोग</span>
+          </label>
+          <input type="range" id="guestSlider" min="200" max="1500" step="50" value="600" oninput="calculateEstimate()" class="w-full accent-palace-gold cursor-pointer" />
+        </div>
+
+        <div>
+          <label class="block text-xs text-gray-300 font-medium mb-1">वेन्यू का चयन:</label>
+          <select id="venueChoice" onchange="calculateEstimate()" class="w-full bg-[#16161D] border border-palace-border rounded-xl px-3.5 py-2.5 text-xs text-gray-200 focus:outline-none focus:border-palace-gold">
+            <option value="hall">एसी क्रिस्टल हॉल (Indoor Only)</option>
+            <option value="lawn" selected>हॉल + विशाल लॉन दोनों (Combined)</option>
+            <option value="all">पूरा परिसर एक्सक्लूसिव</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs text-gray-300 font-medium mb-1">कैटरिंग मेन्यू:</label>
+          <select id="cateringChoice" onchange="calculateEstimate()" class="w-full bg-[#16161D] border border-palace-border rounded-xl px-3.5 py-2.5 text-xs text-gray-200 focus:outline-none focus:border-palace-gold">
+            <option value="none">सिर्फ वेन्यू (अपनी कैटरिंग)</option>
+            <option value="royalVeg" selected>रॉयल वेज बुफे (35+ आइटम्स + चाट)</option>
+            <option value="imperialMix">इम्पीरियल मिक्स बुफे (वेज + नॉन-वेज)</option>
+          </select>
+        </div>
+
+        <div class="bg-palace-black border border-palace-border rounded-xl p-5 mt-6 text-center">
+          <span class="text-[10px] text-gray-400 uppercase tracking-wider block mb-1">अनुमानित पैकेज:</span>
+          <div id="totalEstimate" class="text-2xl sm:text-3xl font-cinzel font-bold gold-gradient-text">
+            ₹3,50,000 – ₹4,20,000
+          </div>
+          <button onclick="sendCalculatedQuote()" class="mt-4 w-full gold-btn py-3 rounded-xl text-xs uppercase font-bold tracking-wider flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+            <span>यह कोटेशन WhatsApp पर भेजें</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LOCATION & CONTACT ==================== -->
+  <section id="contact" class="py-20 max-w-5xl mx-auto px-4">
+    <div class="royal-card rounded-2xl p-6 sm:p-10 border border-palace-border">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+          <span class="text-[10px] uppercase tracking-[0.2em] text-palace-gold font-semibold">Location</span>
+          <h3 class="text-2xl font-cinzel font-bold text-white mt-1 mb-4">वेन्यू का पता</h3>
+          <p class="text-xs text-gray-300 leading-relaxed mb-4">
+            <strong>The Wedding House</strong><br/>
+            Ring Road, in front of Sankara Eye Hospital, Madhopur, Varanasi, Uttar Pradesh 221003
+          </p>
+          <p class="text-xs text-gray-300 mb-6">
+            <strong>फ़ोन:</strong> <a href="tel:08488808588" class="text-palace-gold font-bold">+91 084888 08588</a><br/>
+            <strong>समय:</strong> प्रतिदिन 9:00 AM – 9:00 PM
+          </p>
+          <div class="flex gap-3">
+            <a href="https://maps.app.goo.gl/MjQRXauosDczBLry8" target="_blank" class="gold-btn px-5 py-2.5 rounded-full text-xs uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-diamond-turn-right text-xs"></i>
+              <span>Google Maps</span>
+            </a>
+            <a href="tel:08488808588" class="gold-outline-btn px-5 py-2.5 rounded-full text-xs uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-phone text-xs"></i>
+              <span>Call Now</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="h-60 rounded-xl overflow-hidden border border-palace-border">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.898869818815!2d82.9515!3d25.378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2d000a69c255%3A0xacc8e09894d5343b!2sThe%20Wedding%20House!5e0!3m2!1sen!2sin!4v1700000000000" 
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-palace-black border-t border-palace-border py-8 px-4 text-center pb-24 sm:pb-8 w-full">
+    <span class="text-lg font-cinzel font-bold gold-gradient-text tracking-widest block mb-1">THE WEDDING HOUSE</span>
+    <p class="text-[10px] text-gray-500 mb-4">Ring Road, Varanasi • Luxury Banquet & Lawn</p>
+    <div class="text-[10px] text-gray-600">© 2026 The Wedding House Varanasi. All Rights Reserved.</div>
+  </footer>
+
+  <!-- ==================== MOBILE COMPACT STICKY BAR ==================== -->
+  <div class="fixed bottom-0 inset-x-0 z-40 bg-[#070709]/95 backdrop-blur-md border-t border-palace-border p-2.5 sm:hidden flex items-center justify-around w-full">
+    <a href="tel:08488808588" class="flex flex-col items-center text-gray-400 text-[10px]">
+      <i class="fa-solid fa-phone text-sm mb-0.5 text-palace-gold"></i>
+      <span>Call</span>
+    </a>
+    <a href="https://maps.app.goo.gl/MjQRXauosDczBLry8" target="_blank" class="flex flex-col items-center text-gray-400 text-[10px]">
+      <i class="fa-solid fa-diamond-turn-right text-sm mb-0.5 text-palace-gold"></i>
+      <span>Map</span>
+    </a>
+    <a href="#calculator" class="flex flex-col items-center text-gray-400 text-[10px]">
+      <i class="fa-solid fa-calculator text-sm mb-0.5 text-palace-gold"></i>
+      <span>Budget</span>
+    </a>
+    <a href="https://wa.me/918488808588?text=Hello%20The%20Wedding%20House,%20I%20want%20to%20book%20dates" target="_blank" class="gold-btn px-4 py-2 rounded-full font-bold text-[10px] flex items-center gap-1.5 uppercase">
+      <i class="fa-brands fa-whatsapp text-xs"></i>
+      <span>Book</span>
+    </a>
+  </div>
+
+  <!-- ==================== JAVASCRIPT & AUDIO LOGIC ==================== -->
+  <script>
+    // 1. Procedural Web Audio Chime (Luxury SFX)
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    function playChime() {
+      try {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+        osc.frequency.exponentialRampToValueAtTime(783.99, audioCtx.currentTime + 0.35); // G5
+        gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.9);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.9);
+      } catch (e) {}
+    }
+
+    // 2. Intro Unlock Animation
+    function enterPalace() {
+      playChime();
+      const curtain = document.getElementById('introCurtain');
+      curtain.style.opacity = '0';
+      curtain.style.transform = 'scale(1.03)';
+      curtain.style.pointerEvents = 'none';
+      setTimeout(() => {
+        curtain.style.display = 'none';
+      }, 900);
+    }
+
+    // 3. Gallery Filtering
+    function filterGallery(category) {
+      playChime();
+      const boxes = document.querySelectorAll('.gallery-box');
+      const buttons = document.querySelectorAll('.gallery-btn');
+
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-palace-gold', 'text-palace-black', 'font-bold');
+        btn.classList.add('bg-palace-card', 'text-gray-400');
+      });
+      event.target.classList.remove('bg-palace-card', 'text-gray-400');
+      event.target.classList.add('bg-palace-gold', 'text-palace-black', 'font-bold');
+
+      boxes.forEach(box => {
+        if (category === 'all' || box.classList.contains(category)) {
+          box.style.display = 'block';
+        } else {
+          box.style.display = 'none';
+        }
+      });
+    }
+
+    // 4. Lightbox View
+    function openLightbox(src, caption) {
+      playChime();
+      const box = document.getElementById('lightbox');
+      const img = document.getElementById('lightboxImg');
+      const cap = document.getElementById('lightboxCaption');
+      img.src = src;
+      cap.innerText = caption;
+      box.classList.remove('hidden');
+      box.classList.add('flex');
+    }
+
+    function closeLightbox() {
+      const box = document.getElementById('lightbox');
+      box.classList.add('hidden');
+      box.classList.remove('flex');
+    }
+
+    // 5. Interactive Budget Estimator
+    function calculateEstimate() {
+      const guests = parseInt(document.getElementById('guestSlider').value);
+      const venue = document.getElementById('venueChoice').value;
+      const catering = document.getElementById('cateringChoice').value;
+
+      document.getElementById('guestLabel').innerText = guests + " लोग";
+
+      let venueCost = 150000;
+      if (venue === 'lawn') venueCost = 220000;
+      if (venue === 'all') venueCost = 320000;
+
+      let perPlate = 0;
+      if (catering === 'royalVeg') perPlate = 850;
+      if (catering === 'imperialMix') perPlate = 1250;
+
+      const total = venueCost + (guests * perPlate);
+      const maxTotal = Math.round(total * 1.2);
+
+      document.getElementById('totalEstimate').innerText = 
+        `₹${total.toLocaleString('en-IN')} – ₹${maxTotal.toLocaleString('en-IN')}`;
+    }
+
+    function sendCalculatedQuote() {
+      const guests = document.getElementById('guestSlider').value;
+      const est = document.getElementById('totalEstimate').innerText;
+      const msg = `नमस्ते The Wedding House,\nमैंने आपकी वेबसाइट पर वेडिंग बजट चेक किया है:\n• मेहमान: ${guests}\n• अनुमानित लागत: ${est}\nकृपया मेरी तारीख के लिए फाइनल रेट्स बताएं।`;
+      window.open(`https://wa.me/918488808588?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    // Security: Prevent Right Click
+    document.addEventListener('contextmenu', e => e.preventDefault());
+  </script>
+</body>
+  </html>
